@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+wget http://www.euroinvestor.com/stock/historicalquotes.aspx\?instrumentId\=2565715\&format\=CSV -O ~/prj/csv/data/galil.csv

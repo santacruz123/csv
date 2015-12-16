@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+wget -qO- "http://www.tase.co.il/_layouts/Tase/ManagementPages/Export.aspx?sn=none&GridId=128&ct=1&oid=01125400&ot=1&lang=en-US&cp=8&CmpId=000926&ExportType=3&cf=0&cv=0&cl=0&cgt=1&dFrom=11/01/2010&dTo=15/12/2015" | tail -n+4 $1 | awk -v OFS="" -F, 'NR==1 {print "date,open,high,low,close,volume"}NR!=1{print $1,",",$6,",",$8,",",$9,",",$3,",",$13}' > shahar.csv

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+~/prj/csv/israel/galil
+~/prj/csv/israel/shahar
+~/prj/csv/israel/ta25
+open /Applications/MotiveWave.app

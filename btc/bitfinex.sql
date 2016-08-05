@@ -80,3 +80,5 @@ SELECT
 FROM
   ohlc_bitfinex
 ) TO '/tmp/BTCUSD.csv' WITH CSV;
+
+TRUNCATE ohlc_bitfinex,raw_bitfinex,ohlc_bitfinex;

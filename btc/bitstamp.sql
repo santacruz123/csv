@@ -80,3 +80,5 @@ SELECT
 FROM
   ohlc_bitstamp
 ) TO '/tmp/BTCUSD.csv' WITH CSV;
+
+TRUNCATE ohlc_bitstamp,raw_bitstamp,ohlc_bitstamp;

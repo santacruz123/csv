@@ -1,25 +1,25 @@
-DROP TABLE IF EXISTS raw_bitstamp;
-DROP TABLE IF EXISTS time_bitstamp;
-DROP TABLE IF EXISTS ohlc_bitstamp;
+DROP TABLE IF EXISTS raw_bitstamp CASCADE;
+DROP TABLE IF EXISTS time_bitstamp CASCADE;
+DROP TABLE IF EXISTS ohlc_bitstamp CASCADE;
 
 CREATE TABLE raw_bitstamp (
   epoch  INTEGER,
-  price  DECIMAL(12, 2),
-  volume DECIMAL(24, 3)
+  price  REAL,
+  volume REAL
 );
 
 CREATE TABLE time_bitstamp (
-  dt     TIMESTAMP WITHOUT TIME ZONE,
-  price  DECIMAL(12, 2),
-  volume DECIMAL(24, 3)
+  dt     TIMESTAMPTZ,
+  price  REAL,
+  volume REAL
 );
 
 CREATE INDEX ON time_bitstamp (dt);
 
 CREATE TABLE ohlc_bitstamp (
-  date   TIMESTAMP WITHOUT TIME ZONE,
-  open   DECIMAL(12, 2),
-  high   DECIMAL(12, 2),
+  date   TIMESTAMPTZ,
+  open   REAL,
+  high   REAL
   low    DECIMAL(12, 2),
   close  DECIMAL(12, 2),
   volume INTEGER
